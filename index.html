@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	  <meta name="description" content="Search through the NYT tag database.">
+	  <meta name="author" content="Kevin Lizarazo">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Times Tag Search Engine</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+	<body>
+
+		<!-- FIXED MENU -->
+		<div class="ui top fixed menu">
+		  <div class="item">
+		    <img src="https://media.giphy.com/media/l2JHRhAtnJSDNJ2py/giphy.gif">
+		  </div>
+		  <a href="index.html" class="item">NYTimes Tag Search Engine</a>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- END FIXED MENU -->
+		<!-- MAIN CONTENT GRID -->
+		<div class="ui two column centered grid">
+			<div class="column">
+				<div class="text">
+					<p>With the TimesTags API, you can mine the riches of the New York Times tag set. The TimesTags service matches your query to the controlled vocabularies that fuel NYTimes.com metadata. You supply a string of characters, and the service returns a ranked list of suggested terms.</p>
+
+					<p>The TimesTags API operates on a subset of Times tags: those tags used to create Times Topics pages. The subset includes approximately 27,000 tags:</p>
+					
+					<ul>
+						<li>(Des): 3,000 terms</li>
+						<li>(Geo): 1,500 terms</li>
+						<li>(Org): 7,500 terms</li>
+						<li>(Per): 15,000 terms</li>
+					</ul>
+
+					<p style="font-size: 12px"><em>Problems searching? Try a page-specific hard refresh and try again (CTRL+Shift+R). Note: occasionally, API calls experience network lag.</em></p>
+					<p style="font-size: 12px"><em>By Kevin Lizarazo</em></p>
+
+				</div>
+				<div class="ui fluid action input">
+					<input type="text" placeholder="Query" class="js-tag-input">
+					<div class="ui primary button js-search">Search</div>
+				</div><!-- ui fluid action input -->
+				<div class="text checks">
+					<p>Filter by description, geography, organization, or person. Leave all unchecked for no filters.</p>
+					<div class="ui radio checkbox">
+					  <input type="radio" name="filter" value="(Geo)" id="js-geo">
+					  <label>Geo</label>
+					</div>
+					<div class="ui radio checkbox">
+					  <input type="radio" name="filter" value="(Des)" id="js-des">
+					  <label>Des</label>
+					</div>
+					<div class="ui radio checkbox">
+					  <input type="radio" name="filter" value="(Org)" id="js-org">
+					  <label>Org</label>
+					</div>
+					<div class="ui radio checkbox">
+					  <input type="radio" name="filter" value="(Per)" id="js-per">
+					  <label>Per</label>
+					</div>
+					<div class="ui radio checkbox">
+					  <input type="radio" name="filter" value="(Per)" id="js-none">
+					  <label>None</label>
+					</div>
+				</div>
+			</div><!-- column -->
+
+		</div>
+		<div class="js-data"></div>
+		<!-- END MAIN CONTENT GRID -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="javascript/app.js"></script>
+	</body>
+</html>

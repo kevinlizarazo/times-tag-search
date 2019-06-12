@@ -1,0 +1,21 @@
+/* main.css */
+.full-width-image {
+	width: 100%;
+}
+
+.text {
+  margin-bottom: 30px;
+}
+
+.text p, ul {
+  font-size: 15px;
+}
+
+.checkbox {
+  margin-right: 30px;
+}
+
+.js-data {
+  text-align: center;
+  margin-bottom: 100px;
+}
