@@ -1,5 +1,4 @@
-### Demo: 
-https://kevinlizarazo.github.io/times-tag-search-engine/
+
 
 # NYT Tags Search Engine
 
